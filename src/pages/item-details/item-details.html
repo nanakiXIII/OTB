@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{selectedItem.nom}}</ion-title>
+  </ion-navbar>
+  <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="info">
+        <ion-segment-button value="Informations">
+          Température
+        </ion-segment-button>
+        <ion-segment-button value="Videos">
+          Informations
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div *ngIf="selectedItem">
+      <div [ngSwitch]="info">
+        <ion-card *ngSwitchCase="'Informations'">
+          <div class="formulaire" *ngIf="!selectedItem.tempId">
+            <ion-grid>
+                <ion-row>
+                  <ion-col col-3 class="valeur">{{selectedItem.valeur}}</ion-col>
+                  <ion-col col-6 class="donnee"></ion-col>
+                  <ion-col col-3 class="valeur" (click)=del()><</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('1')">1</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('2')">2</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('3')">3</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('4')">4</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('5')">5</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('6')">6</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('7')">7</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('8')">8</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('9')">9</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('.')">.</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="ajout('0')">0</ion-col>
+                  <ion-col col-4 class="chiffre" (click)="hs()">HS</ion-col>
+                  <ion-col col-12 class="valider" (click)="val()">Valider</ion-col>
+                </ion-row>
+              </ion-grid>
+          </div>
+          <div *ngIf="selectedItem.tempId" class="info">
+            Température: {{selectedItem.temp}}<br><hr>
+            Date: {{selectedItem.jour}} - {{selectedItem.mois}} - {{selectedItem.annee}}
+          </div>
+        </ion-card>
+        <ion-card *ngSwitchCase="'Videos'">
+            <ion-list>
+                <div ion-item *ngFor="let item of dataSet">
+                  <ion-grid>
+                      <ion-row>
+                        <ion-col col-4 class="valeur">{{item.temp}}</ion-col>
+                        <ion-col col-8 class="valeur">{{item.jour}}/{{item.mois}}/{{item.annee}}</ion-col>
+                      </ion-row>
+                    </ion-grid>
+                </div> 
+              </ion-list>
+        </ion-card>
+      </div>
+  </div>
+</ion-content>

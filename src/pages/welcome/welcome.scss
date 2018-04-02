@@ -1,0 +1,44 @@
+page-welcome {
+#welcome{
+    background: color($colors, energy);
+    color: #fff;
+    h1{
+        width: 100%;
+        text-align: center;
+        font-size: 26px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 0.1em 0.1em #333;
+    }
+    .centre{
+        text-shadow: 0.1em 0.1em #333;
+        margin-top:45px;
+        width: 100%;
+        // background: rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+    .info{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .marginTop{
+        margin-top:140px;
+    }
+    .btn{
+        margin-bottom: 15px;
+        padding: 10px;
+        font-size: 26px;
+        text-shadow: 0.1em 0.1em #333;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.1);
+    }
+    .logo{
+        text-align: center;
+        height: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+}
+}

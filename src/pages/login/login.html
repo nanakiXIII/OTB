@@ -1,0 +1,26 @@
+<ion-content padding id="login">
+    <ion-row center>
+      <img src="assets/imgs/logo.png" class="logo"/>
+      <h2>Entrez vos identifiants</h2>
+    </ion-row>
+    
+<ion-list inset>
+  <ion-item>
+    <ion-label floating>Pseudo</ion-label>
+    <ion-input type="text" value="" [(ngModel)]="userData.username"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Mot de passe</ion-label>
+    <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+  </ion-item>
+  <div class="droite">
+    Mot de passe oublié ?
+  </div>
+
+  <button ion-button block color="success" class="top" (click)="login()">Se connecter</button>
+
+  <div class="ou">ou</div>
+
+  <button ion-button block color="primary" class="bottom" (click)="signup()">Créer un compte</button>
+</ion-list>
+</ion-content>

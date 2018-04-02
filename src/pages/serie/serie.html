@@ -1,0 +1,59 @@
+<!--
+  Generated template for the SeriePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar no-border-bottom>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Liste</ion-title>
+  </ion-navbar>
+
+<ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="Animes">
+        A faire
+      </ion-segment-button>
+      <ion-segment-button value="terminer">
+        Fait
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <div [ngSwitch]="pet">
+      <ion-list *ngSwitchCase="'Animes'" >
+        <div *ngFor="let item of dataSet">
+          <ion-item  (click)="itemTapped($event, item)" *ngIf="!item.tempId">
+            <ion-thumbnail item-start >
+              <img src="http://via.placeholder.com/100x100?text={{item.id}}" width="100%">
+            </ion-thumbnail>
+            <h2>{{ item.nom }}</h2>
+            <button ion-button clear item-end *ngIf="item.tempId" class="icone">
+              <ion-icon name="checkmark"></ion-icon>
+            </button>
+          </ion-item>
+                
+        </div>
+      </ion-list>
+      <ion-list *ngSwitchCase="'terminer'">
+        <div *ngFor="let item of dataSet">
+            <ion-item  (click)="itemTapped($event, item)" *ngIf="item.tempId">
+                <ion-thumbnail item-start >
+                  <img src="http://via.placeholder.com/100x100?text={{item.id}}" width="100%">
+                </ion-thumbnail>
+                <h2>{{ item.nom }}</h2>
+                <button ion-button clear item-end *ngIf="item.tempId" class="icone">
+                  <ion-icon name="checkmark"></ion-icon>
+                </button>
+              </ion-item>
+        </div>
+      </ion-list>
+    </div>
+</ion-content>

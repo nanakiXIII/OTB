@@ -1,0 +1,28 @@
+page-item-details {
+    .item{
+        border-bottom: 1px solid #eee;
+    }
+    .chiffre, .valider{
+        text-align: center;
+        padding: 30px;
+        background-color: dimgrey;
+        color: #eee;
+        font-size: 1.5em;
+        border: 1px solid #fff;
+    }
+    .donnee, .valeur{
+        padding: 30px;
+        width: 100%;
+        text-align: center;
+        background-color: #eee;
+        font-size: 1.5em;
+        min-height: 1.5em;
+    }
+    .valider{
+        background-color: green;
+    }
+    .info{
+        padding: 15px;
+        font-size: 1.5em;
+    }
+}

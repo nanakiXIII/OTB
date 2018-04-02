@@ -1,0 +1,29 @@
+<ion-content padding id="signup">
+    <ion-row center>
+        <h2>Créer un compte</h2>
+      </ion-row>
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Nom de Compte</ion-label>
+    <ion-input type="text"  [(ngModel)]="userData.name"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Email</ion-label>
+    <ion-input type="text"  [(ngModel)]="userData.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Pseuso</ion-label>
+    <ion-input type="text"  [(ngModel)]="userData.username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label floating>Mot de passe</ion-label>
+    <ion-input type="password" [(ngModel)]="userData.password"></ion-input>
+  </ion-item>
+  <button ion-button block color="success" class="top" (click)="signup()">Créer mon compte</button>
+  <button ion-button block color="primary" class="bottom" (click)="login()">Retour</button>
+</ion-list>
+</ion-content>

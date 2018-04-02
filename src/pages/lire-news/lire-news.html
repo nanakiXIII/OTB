@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+      <button menuToggle *ngIf="!news">
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>{{news.titre}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+    <ion-card-content padding>
+        <div [innerHTML]="news.contenu"></div>
+        <div id="disqus_thread"></div>
+    </ion-card-content>
+</ion-content>

@@ -1,0 +1,76 @@
+page-login {
+    #login{
+    background: color($colors, energy);
+    color: #fff;
+    h2{
+        width: 100%;
+        text-align: center;
+        text-shadow: 0.1em 0.1em #333;
+    }
+    ion-row{
+        margin-bottom: 0px;
+    }
+    ion-list{
+        margin-top: 0px;
+    }
+        .logo{
+        text-align: center;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        input{
+            background-color: transparent!important;
+            border: none !important;
+        }
+        .top{
+            margin-top: 30px;
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .item-md, .item-wp{
+            color: #fff;
+            background-color: transparent!important;
+        }
+        .item-wp{
+            border-bottom: 1px solid #eee;
+        }
+        .label-md, .label-wp{
+            text-shadow: 0.1em 0.1em #333;
+            color: #fff!important;
+            font-weight: bold;
+        }
+        button{
+            text-transform: none!important;
+        }
+        .droite{
+            text-shadow: 0.1em 0.1em #333;
+            font-size: 16px;
+            margin-bottom: 15px;
+            margin-top: 10px;
+            width: 100%;
+            text-align: right;
+        }
+        .ou{
+            text-shadow: 0.1em 0.1em #333;
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+        .ou:before, .ou:after { 
+            content:''; display:inline-block; 
+            vertical-align: middle; 
+            width: 9rem; 
+            height: 1px; 
+            background: #fff }
+        .ou:before { margin-right: 0.8rem }
+        .ou:after { margin-left: 0.8rem }
+
+    }
+    
+
+}
